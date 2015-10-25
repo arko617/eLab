@@ -1,0 +1,561 @@
+doctype html(lang='en')
+head
+    // ------------------------------------------Nice Admin theme-------------------
+    meta(charset='utf-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+    meta(name='description', content='Creative - Bootstrap 3 Responsive Admin Template')
+    |     
+    meta(name='author', content='GeeksLabs')
+    |     
+    meta(name='keyword', content='Creative, Dashboard, Admin, Templatele, Theme, Bootstrap, Responsive, Retina, Minimal')
+    |     
+    link(rel='shortcut icon', href='/stylesheets/theme_nice_admin/img/favicon.png')
+    |     
+    // Bootstrap CSS
+    link(href='/stylesheets/theme_nice_admin/css/bootstrap.min.css', rel='stylesheet')
+    // bootstrap theme
+    link(href='/stylesheets/theme_nice_admin/css/bootstrap-theme.css', rel='stylesheet')
+    // external css
+    // font icon
+    link(href='/stylesheets/theme_nice_admin/css/elegant-icons-style.css', rel='stylesheet')
+    |     
+    link(href='/stylesheets/theme_nice_admin/css/font-awesome.min.css', rel='stylesheet')
+    // full calendar css
+    link(href='/stylesheets/theme_nice_admin/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css', rel='stylesheet')
+    | &#x9;
+    link(href='/stylesheets/theme_nice_admin/assets/fullcalendar/fullcalendar/fullcalendar.css', rel='stylesheet')
+    // easy pie chart
+    link(href='/stylesheets/theme_nice_admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css', rel='stylesheet', type='text/css', media='screen')
+    // owl carousel
+    link(rel='stylesheet', href='/stylesheets/theme_nice_admin/css/owl.carousel.css', type='text/css')
+    | &#x9;
+    link(href='/stylesheets/theme_nice_admin/css/jquery-jvectormap-1.2.2.css', rel='stylesheet')
+    // Custom styles
+    link(rel='stylesheet', href='/stylesheets/theme_nice_admin/css/fullcalendar.css')
+    | &#x9;
+    link(href='/stylesheets/theme_nice_admin/css/widgets.css', rel='stylesheet')
+    |     
+    link(href='/stylesheets/theme_nice_admin/css/style.css', rel='stylesheet')
+    |     
+    link(href='/stylesheets/theme_nice_admin/css/style-responsive.css', rel='stylesheet')
+    | &#x9;
+    link(href='/stylesheets/theme_nice_admin/css/xcharts.min.css', rel=' stylesheet')
+    | &#x9;
+    | &#x9;
+    link(href='/stylesheets/theme_nice_admin/css/jquery-ui-1.10.4.min.css', rel='stylesheet')
+    // HTML5 shim and Respond.js IE8 support of HTML5
+    //if lt IE 9
+      script(src='/stylesheets/theme_nice_admin/js/html5shiv.js')
+      |       
+      script(src='/stylesheets/theme_nice_admin/js/respond.min.js')
+      |       
+      script(src='/stylesheets/theme_nice_admin/js/lte-ie7.js')
+    //----------------------------------------------End nice admin
+    //------------------------------------------elab
+        title= 'eLab'
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300,400italic')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/customBootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    <!--Master sheets-->
+    link(rel='stylesheet', href='/stylesheets/workspace/masterSheet_workspace.css')
+    <!--Developed libraries for LabBook-->
+    script(src="/js/lib/common/common.js")
+    script(src="/js/lib/drive/driveConvertResponse.js")
+    script(src="/js/lib/drive/driveCRUD.js")
+    script(src="/js/lib/drive/driveInfo.js")
+    script(src="/js/lib/drive/driveFilters.js")
+    script(src="/js/lib/dropbox/dropboxInfo.js")
+    script(src="/js/lib/dropbox/dropboxCRUD.js")
+    
+    <!--Google Drive JS api-->
+    script(type="text/javascript", src="https://apis.google.com/js/client.js?onload=handleClientLoad")
+    
+    <!--Dropbox Drive api-->
+    script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js")
+    
+    <!--bootstrap.js is being run when requireJS is first loaded-->
+    script(type="text/javascript", data-main="/js/bootstrap", src="/js/lib/requirejs/require-min.js")
+    
+    <!--Socket.io-->
+    <!--script(src="/socket.io/socket.io.js")-->
+    
+    <!--Dynatree-->
+    link(rel="stylesheet",href="/js/lib/jquery.dynatree-1.2.5-all/src/skin-vista/ui.dynatree.css")
+   
+    <!--scrollbar-->
+    <!--link(rel='stylesheet', href='/js/lib/nanoScroller/nanoscroller.css')-->
+    
+    <!--custom-scrollar-->
+    link(rel='stylesheet', href='/js/lib/custom-scrollbar/jquery.mCustomScrollbar.css')
+    
+    <!--bootstrap-editbale-->
+    link(rel='stylesheet', href='/js/lib/bootstrap-editable/css/bootstrap-editable.css')
+   
+    <!--sidebar-->
+    link(rel='stylesheet', href='/js/lib/sidebar/css/dark-glass/sidebar.css')  
+    
+    <!--Spinner for loading icon-->
+    <!-- script(src="/js/lib/spin/spin.js")-->
+    
+    <!--w2UI css for tag system-->
+    <!-- link(rel='stylesheet', href='/js/lib/w2ui-1.3.2/w2ui-1.3.2.css') -->
+    
+    <!--tagManger for nicely looking tag-->
+    link(rel='stylesheet', href='/js/lib/tagManager/tagmanager.css')
+    
+    <!--sticky notes; add new font from google-->
+    link(href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular",rel="stylesheet",type="text/css")
+    link(rel='stylesheet', href='/js/lib/stickyNote/stickyNote.css')
+                
+    // --------------end elab      
+  |   
+body
+    // container section start
+    section#container
+      header.header.dark-bg
+        .toggle-nav
+          .icon-reorder.tooltips(data-original-title='Toggle Navigation', data-placement='bottom')
+        // logo start
+        a.logo(href='/stylesheets/theme_nice_admin/index.html')
+          | Nice 
+          span.lite Admin
+        // logo end
+        #top_menu.nav.search-row
+          // search form start
+          ul.nav.top-menu
+            li
+              form.navbar-form
+                input.form-control(placeholder='Search', type='text')
+          // search form end
+        |             
+        .top-nav.notification-row
+          // notificatoin dropdown start
+          ul.nav.pull-right.top-menu
+            // task notificatoin start
+            li#task_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='/stylesheets/theme_nice_admin/#')
+                span.icon-task-l
+                  span.badge.bg-important 6
+              |                         
+              ul.dropdown-menu.extended.tasks-bar
+                .notify-arrow.notify-arrow-blue
+                |                             
+                li
+                  p.blue You have 6 pending letter
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    .task-info
+                      .desc Design PSD 
+                      |                                         
+                      .percent 90%
+                    |                                     
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='90', aria-valuemin='0', aria-valuemax='100', style='width: 90%')
+                        span.sr-only 90% Complete (success)
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    .task-info
+                      .desc
+                        | Project 1
+                      |                                         
+                      .percent 30%
+                    |                                     
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='30', aria-valuemin='0', aria-valuemax='100', style='width: 30%')
+                        span.sr-only 30% Complete (warning)
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    .task-info
+                      .desc Digital Marketing
+                      |                                         
+                      .percent 80%
+                    |                                     
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    .task-info
+                      .desc Logo Designing
+                      |                                         
+                      .percent 78%
+                    |                                     
+                    .progress.progress-striped
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='78', aria-valuemin='0', aria-valuemax='100', style='width: 78%')
+                        span.sr-only 78% Complete (danger)
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    .task-info
+                      .desc Mobile App
+                      |                                         
+                      .percent 50%
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100', style='width: 50%')
+                        span.sr-only 50% Complete
+                |                             
+                li.external
+                  a(href='/stylesheets/theme_nice_admin/#') See All Tasks
+            // task notificatoin end
+            // inbox notificatoin start
+            li#mail_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='/stylesheets/theme_nice_admin/#')
+                i.icon-envelope-l
+                |                             
+                span.badge.bg-important 5
+              |                         
+              ul.dropdown-menu.extended.inbox
+                .notify-arrow.notify-arrow-blue
+                |                             
+                li
+                  p.blue You have 5 new messages
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    span.photo
+                      img(alt='avatar', src='/stylesheets/theme_nice_admin/./img/avatar-mini.jpg')
+                    |                                     
+                    span.subject
+                      span.from Greg  Martin
+                      |                                     
+                      span.time 1 min
+                    |                                     
+                    span.message
+                      | I really like this admin panel.
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    span.photo
+                      img(alt='avatar', src='/stylesheets/theme_nice_admin/./img/avatar-mini2.jpg')
+                    |                                     
+                    span.subject
+                      span.from Bob   Mckenzie
+                      |                                     
+                      span.time 5 mins
+                    |                                     
+                    span.message
+                      | Hi, What is next project plan?
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    span.photo
+                      img(alt='avatar', src='/stylesheets/theme_nice_admin/./img/avatar-mini3.jpg')
+                    |                                     
+                    span.subject
+                      span.from Phillip   Park
+                      |                                     
+                      span.time 2 hrs
+                    |                                     
+                    span.message
+                      | I am like to buy this Admin Template.
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    span.photo
+                      img(alt='avatar', src='/stylesheets/theme_nice_admin/./img/avatar-mini4.jpg')
+                    |                                     
+                    span.subject
+                      span.from Ray   Munoz
+                      |                                     
+                      span.time 1 day
+                    |                                     
+                    span.message
+                      | Icon fonts are great.
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#') See all messages
+            // inbox notificatoin end
+            // alert notification start
+            li#alert_notificatoin_bar.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='/stylesheets/theme_nice_admin/#')
+                i.icon-bell-l
+                |                             
+                span.badge.bg-important 7
+              |                         
+              ul.dropdown-menu.extended.notification
+                .notify-arrow.notify-arrow-blue
+                |                             
+                li
+                  p.blue You have 4 new notifications
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    span.label.label-primary
+                      i.icon_profile
+                    |  
+                    |                                     Friend Request
+                    |                                     
+                    span.small.italic.pull-right 5 mins
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    span.label.label-warning
+                      i.icon_pin
+                    |   
+                    |                                     John location.
+                    |                                     
+                    span.small.italic.pull-right 50 mins
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    span.label.label-danger
+                      i.icon_book_alt
+                    |  
+                    |                                     Project 3 Completed.
+                    |                                     
+                    span.small.italic.pull-right 1 hr
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    span.label.label-success
+                      i.icon_like
+                    |  
+                    |                                     Mick appreciated your work.
+                    |                                     
+                    span.small.italic.pull-right  Today
+                |                             
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#') See all notifications
+            // alert notification end
+            // user login dropdown start
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='/stylesheets/theme_nice_admin/#')
+                span.profile-ava
+                  img(alt='', src='/stylesheets/theme_nice_admin/img/avatar1_small.jpg')
+                |                             
+                span.username Jenifer Smith
+                |                             
+                b.caret
+              |                         
+              ul.dropdown-menu.extended.logout
+                .log-arrow-up
+                |                             
+                li.eborder-top
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    i.icon_profile
+                    |  My Profile
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    i.icon_mail_alt
+                    |  My Inbox
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    i.icon_clock_alt
+                    |  Timeline
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/#')
+                    i.icon_chat_alt
+                    |  Chats
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/login.html')
+                    i.icon_key_alt
+                    |  Log Out
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/documentation.html')
+                    i.icon_key_alt
+                    |  Documentation
+                |                             
+                li
+                  a(href='/stylesheets/theme_nice_admin/documentation.html')
+                    i.icon_key_alt
+                    |  Documentation
+            // user login dropdown end
+          // notificatoin dropdown end
+      // header end
+      // sidebar start
+      aside
+        #sidebar.nav-collapse
+          // sidebar menu start
+          ul.sidebar-menu
+            li.active
+              a(href='/stylesheets/theme_nice_admin/index.html')
+                i.icon_house_alt
+                |                           
+                span Dashboard
+            | &#x9;&#x9;&#x9;&#x9;  
+            li.sub-menu
+              a(href="#")
+                i.icon_document_alt
+                |                           
+                span Forms
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub.nav.nav-second-level
+                li
+                  a(href='/stylesheets/theme_nice_admin/form_component.html') Form Elements
+                |                           
+                |                           
+                li
+                  a(href='/stylesheets/theme_nice_admin/form_validation.html') Form Validation
+            |        
+            |                   
+            li.sub-menu
+              a(href='/stylesheets/theme_nice_admin/javascript:;')
+                i.icon_desktop
+                |                           
+                span UI Fitures
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='/stylesheets/theme_nice_admin/general.html') Elements
+                |                           
+                li
+                  a(href='/stylesheets/theme_nice_admin/buttons.html') Buttons
+                |                           
+                li
+                  a(href='/stylesheets/theme_nice_admin/grids.html') Grids
+            |                   
+            li
+              a(href='/stylesheets/theme_nice_admin/widgets.html')
+                i.icon_genius
+                |                           
+                span Widgets
+            |                   
+            li
+              a(href='/stylesheets/theme_nice_admin/chart-chartjs.html')
+                i.icon_piechart
+                |                           
+                span Charts
+            |                              
+            |                   
+            li.sub-menu
+              a(href='/stylesheets/theme_nice_admin/javascript:;')
+                i.icon_table
+                |                           
+                span Tables
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='/stylesheets/theme_nice_admin/basic_table.html') Basic Table
+            |                   
+            |                   
+            li.sub-menu
+              a(href='/stylesheets/theme_nice_admin/javascript:;')
+                i.icon_documents_alt
+                |                           
+                span Pages
+                |                           
+                span.menu-arrow.arrow_carrot-right
+              |                       
+              ul.sub
+                li
+                  a(href='/stylesheets/theme_nice_admin/profile.html') Profile
+                |                           
+                li
+                  a(href='/stylesheets/theme_nice_admin/login.html')
+                    span Login Page
+                |                           
+                li
+                  a(href='/stylesheets/theme_nice_admin/blank.html') Blank Page
+                |                           
+                li
+                  a(href='/stylesheets/theme_nice_admin/404.html') 404 Error
+          // sidebar menu end
+      // sidebar end
+      // main content start
+      section#main-content
+        section.wrapper
+          // overview start
+          .row
+            .col-lg-12
+              h3.page-header
+                i.fa.fa-laptop
+                |  Dashboard
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+              ol.breadcrumb
+                li
+                  i.fa.fa-home
+                  a(href='/stylesheets/theme_nice_admin/index.html') Home
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li
+                  i.fa.fa-laptop
+                  | Dashboard
+          |               
+    // container section start
+    
+    
+    
+    // ---------------------------ELAB: Javascript for the theme-----
+    // ------We are not loading any JS here because it is handled in require js, however, it is pretty slow. In engineering, let's stick with this way. But in user perspective, we may reconsider
+    // javascripts
+    //script(src='/stylesheets/theme_nice_admin/js/jquery.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/jquery-ui-1.10.4.min.js')
+    |     
+    //script(src='/stylesheets/theme_nice_admin/js/jquery-1.8.3.min.js')
+    |     
+    //script(type='text/javascript', src='/stylesheets/theme_nice_admin/js/jquery-ui-1.9.2.custom.min.js')
+    // bootstrap
+    //script(src='/stylesheets/theme_nice_admin/js/bootstrap.min.js')
+    // nice scroll
+    //script(src='/stylesheets/theme_nice_admin/js/jquery.scrollTo.min.js')
+    |     
+    //script(src='/stylesheets/theme_nice_admin/js/jquery.nicescroll.js', type='text/javascript')
+    // charts scripts
+    //script(src='/stylesheets/theme_nice_admin/assets/jquery-knob/js/jquery.knob.js')
+    |     
+    //script(src='/stylesheets/theme_nice_admin/js/jquery.sparkline.js', type='text/javascript')
+    |     
+    //script(src='/stylesheets/theme_nice_admin/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js')
+    |     
+    //script(src='/stylesheets/theme_nice_admin/js/owl.carousel.js')
+    // jQuery full calendar
+    | &lt;
+    //script(src='/stylesheets/theme_nice_admin/js/fullcalendar.min.js')
+    // Full Google Calendar - Calendar
+    //script(src='/stylesheets/theme_nice_admin/assets/fullcalendar/fullcalendar/fullcalendar.js')
+    // script for this page only
+    //script(src='/stylesheets/theme_nice_admin/js/calendar-custom.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/jquery.rateit.min.js')
+    // custom select
+    //script(src='/stylesheets/theme_nice_admin/js/jquery.customSelect.min.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/assets/chart-master/Chart.js')
+    // custome script for all page
+    //script(src='/stylesheets/theme_nice_admin/js/scripts.js')
+    // custom script for this page
+    //script(src='/stylesheets/theme_nice_admin/js/sparkline-chart.js')
+    |     
+    //script(src='/stylesheets/theme_nice_admin/js/easy-pie-chart.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/jquery-jvectormap-1.2.2.min.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/jquery-jvectormap-world-mill-en.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/xcharts.min.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/jquery.autosize.min.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/jquery.placeholder.min.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/gdp-data.js')
+    | &#x9;
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/morris.min.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/sparklines.js')
+    | &#x9;
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/charts.js')
+    | &#x9;
+    //script(src='/stylesheets/theme_nice_admin/js/jquery.slimscroll.min.js')
+    |   

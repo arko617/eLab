@@ -1,0 +1,302 @@
+/*******************************wNavView**********************************/
+
+.searchProject{
+  margin: 10px 20px 10px 20px;
+}
+
+#wNavViewSideBar{
+  height:100%;
+}
+
+#wNavViewSideBar > .fill{
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+  height: 100%
+}
+
+/*******************************wMainView*********************************/
+/****container**********/
+.wMainView-subContainer{
+  margin-left:20px;
+  margin-right:20px;
+}
+
+/*tab*/
+.tab-glyphicon{
+  margin: 0px 10px 0px 5px;
+}
+
+.rootTab{
+  height:51px;
+  /*background-color: #FFFFFF !important; /*Enforce the background color; '!important' is not always recommended*/*/
+  /*#D3D3D3 for gray*/
+  /*border: 1px solid #D3D3D3 !important;
+  border-bottom-style: none !important;*/
+}
+
+/*overwrite bootstrap***/
+#wMainView > .nav-tabs {
+  border-bottom: 0px solid;
+}
+
+
+/*text align in home tab*/
+.rootTab > div{
+  position: relative;
+  top:9px;
+}
+
+.nav-tabs > li .close{
+  margin: -3px 0 0 10px;
+  font-szie: 18px;
+  padding : 5px 0 ;
+  float: right;
+  position: relative;
+  top: 10px;
+}
+
+.tab-icon{
+  position:relative;
+  top: 5px; /*align tab icon with the text*/
+}
+
+/*overwrite the cursor setting for input field*/
+.tab-icon:hover{
+  cursor: default;
+}
+
+/*Remove border of icon after clicked*/
+.wMainViewNav-icon:focus{
+  outline: 0;
+}
+
+.tab-content{
+  height: 90%; /*Cannot do 100% because nav-tabs get some space*/
+  overflow:auto;
+}
+
+.tab-pane {
+  height:95%;
+  width: 100%,
+}
+
+.tab-pane > iframe{
+  height: 100%;
+  width: 100%;
+}
+
+.tab-pane > .panel{
+  height:100%;
+  width:100%
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}
+
+.close{
+  font-size:14px;  /*replace bootstrap's css*/ 
+}
+
+/*#############wMinaView glyphicon*/
+.wMainViewMain .projects_list .glyphicon{
+  font-size:150%;
+}
+
+.wMainViewMain .files_list .glyphicon{
+  font-size:150%;
+}
+
+.wMainView_files_operationIcons > .glyphicon{
+  visibility:hidden;
+}
+
+
+.selection:hover .wMainView_files_operationIcons > .glyphicon{
+  visibility:visible;
+}
+
+/*zooming effect for icon*/
+.selection:hover .wMainView_files_operationIcons > .glyphicon:hover{
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  position:relative;
+  z-index:5;
+}
+/*#############END:wMinaView glyphicon*/
+/***************wMainView nav**********/
+.wMainViewNav-icon{
+  position:relative;
+  top:5px;
+  /*width:30px;
+  height:30px;*/
+}
+
+/*Apply to everything in nav of wMainView*/
+.browseLoc{
+  font-size:24px;
+  height:50px;
+  width: auto;
+  padding: 6px 6px;
+}
+
+/*for the sublocation , i.e. not root. Need to adjust to fix the root because root has an icon*/
+.browseNormal{
+  position:relative;
+  top:3px;
+}
+
+/*for the root*/
+.browseRoot{
+  padding: 6px 6px 6px 14px;
+}
+
+.browseRightArrow{
+  position:relative;
+  top: 11px;
+  padding: 6px 1px;
+}
+
+/***************projects**************/
+.selection{
+  cursor: pointer;
+  
+  /*no double click highlight*/
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.selection > td:first-child{
+  width:50%;
+}
+
+.selection > td:nth-child(2){
+  width:30%;
+}
+
+.selection > td:last-child{
+  width:20%;
+}
+
+.list-icon{
+  position:relative;
+  bottom: 5px;
+  width: 24px;
+  /*height: 24px;*/
+}
+
+/*************************************************wTagInfoView*************/
+#projectsOverview tr td {
+  border:none;  
+}
+
+/**Construct the nested layout of wTagInfoView**/
+/*
+#wTagInfoView{
+  border: 3px solid #e3e3e3;
+}
+*/
+
+.wTagInfoViewDetails{
+  height: 92%;
+  border: 3px solid #e3e3e3;
+  padding: 15px;
+}
+
+.wTagInfoViewDetailsDivs{
+  height: 95%;
+}
+
+#wTagInfoViewNotesDiv, #wTagInfoViewTagsDiv, #wTagInfoViewDetailsDiv{
+  display: block;
+  height: 95%;
+}
+
+#wTagInfoViewNotesDiv-content, #wTagInfoViewTagsDiv-content, #wTagInfoViewDetailsDiv-content{
+  display: block;
+  height: 95%;
+  position: relative;
+  overflow: auto;
+}
+/***************END: Construct the nested layout of wTagInfoView**/
+
+/**************Header outlook**/
+.wTagInfoViewDiv-header{
+  width: 100%;
+  border-bottom: 3px solid #e3e3e3;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.wTagInfoViewDiv-header > h3{
+  margin-bottom: 1px;
+}
+
+.wTagInfoViewTitle{
+  float:left;
+  /*border-bottom: 3px solid #e3e3e3;
+  padding-bottom: 5px;*/
+}
+
+.wTagInfoViewTitle-contentEdit{
+  float: right;
+  margin-top: 25px;  /*temporary solution to do vertical align. TODO*/
+  cursor:pointer
+}
+/***********End Header outlook**/
+
+#projectDetails{
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+#projectDetails > tbody > tr > td:first-child{
+  width: 35%;
+}
+
+#wTagInfoViewNavTags {
+  background-color: #ffffff;
+}
+
+#wTagInfoViewNavTags table{
+  border-collapse: collapse;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+/*Adjust w2ui css*/
+.w2ui-tabs .w2ui-tab.active{
+  background-color: #E8E8E8 !important;
+   cursor: pointer !important; 
+}
+
+.w2ui-tabs .w2ui-tab{
+  cursor: pointer !important; 
+}
+
+.w2ui-reset * {
+  line-height: normal !important;
+}
+
+/*projectTags*/
+#projectTags{
+  border-style:solid;
+  border-color: #ffffff;
+}
+
+/*overlap some tagManager.cc*/
+.tm-tag{
+  font-size: 14px !important;
+  /*padding: 3px !important;*/
+  color: #fff; /*bootstrap*/
+  background-color: #428bca; /*bootstrap*/
+  border-color: #357ebd; /*bootstrap*/
+}
+
+.projectDetails-subtitle{
+  font-weight:bold;
+}
+

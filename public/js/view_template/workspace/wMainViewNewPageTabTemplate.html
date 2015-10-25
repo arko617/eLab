@@ -1,0 +1,10 @@
+<li class="dropdown">
+  <a href="#file_<%=file.id%>" data-toggle="dropdown" class="dropdown-toggle" googleId="<%=file.id%>">
+    <input class="tab-icon" type="image" src="/icon/cheser/24x24/actions/document-preview.png">
+    <span class="tab_title"><%=file.title%></span><button class="close closePage" type="button" title="#file_<%=file.id%>">x</button>
+  </a>
+  <ul class="dropdown-menu" id="file_<%=file.id%>_tab">
+    <!-- <li><a href="<%=file.link_download%>">Download</a></li>--> <!-- Fail to do this because in the nav-tab bootstrap changes the setting of href. Need to use bootstrap to detect the click and do thing -->
+    <button type="button" class="btn btn-link tab_downloadLink" downLoadLink = "<%=file.link_download%>"><span class="glyphicon glyphicon-download tab-glyphicon"></span>  Download</button>
+  </ul>
+</li>

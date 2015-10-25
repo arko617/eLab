@@ -1,0 +1,23 @@
+doctype 5
+html
+  head
+    title Google Drive
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+    script(src="/socket.io/socket.io.js") 
+    script(src="/js/googleapi.js");
+  body
+    h1 Google Drive
+    span
+    table
+      - for file in fileArray
+        tr
+          td
+            input(type="button", class="deleteButton", value="Delete") 
+          - each val, key in file
+            - if (key!="id")
+              - if (key==="link")
+                  td
+                    a(href=val) #{val}
+              - else
+                  td= val

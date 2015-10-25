@@ -1,0 +1,177 @@
+/*General Style*/
+
+a {
+	color: #3F83BA;
+}
+
+/*****For the eLab header******/
+.container > .navbar{
+	/*margin-left: 20px;
+	margin-right: 20px;*/
+	margin-bottom: auto;
+}
+
+
+a.pageHeader {
+	color: #ffffff;
+	text-decoration:none;
+}
+
+.navigation{
+	cursor: pointer;
+}
+
+.navbar-in {
+	background-color: #3F83BA;	
+	min-height: 40px;
+	/*padding-left: 20px;
+	padding-right: 20px;*/
+}
+
+.header-logo {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: white;
+    display: block;
+    float: left;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 0px 10px 0px 0px;
+}
+
+.header-links{
+    color: #FFFFFF;
+    display: block;
+    float: none;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 3px;
+    padding: 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-links-inactive{
+    color: #9A9898;
+}
+
+.header-user {
+	color: #FFFFFF;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 5px;
+}
+
+.header-margin{
+	margin-top: 7px;
+}
+
+.caret-white {
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-top: 4px solid #FFFFFF;
+    content: "";
+    display: inline-block;
+    height: 0;
+    vertical-align: top;
+    width: 0;
+    margin-left: 2px;
+    margin-top: 8px;
+}
+
+.files-header{
+	font-size: 17.5px;
+	margin-right: 12px;
+	color: inherit;
+	font-family: inherit;
+	font-weight: 300;
+	line-height: 20px;
+	text-rendering: optimizelegibility;
+	margin-bottom: 5px;
+}
+
+.owner-header{
+	float: left;
+	font-size: 15px;
+	margin-right: 15px;
+    color: inherit;
+    font-family: inherit;
+    line-height: 20px;
+    text-rendering: optimizelegibility;
+}
+
+.owner-header-name{
+	float: left;
+	font-size: 15px;
+	margin-right: 15px;
+    color: inherit;
+    font-family: inherit;
+    line-height: 20px;
+    text-rendering: optimizelegibility;
+}
+.user-pic{
+	background-size: 30px 30px;
+    border-radius: 50% 50% 50% 50%;
+    height: 30px;
+    margin-right: 4px;
+    width: 32px;
+}
+.overview-box{
+    background-color: #EEEEEE;
+    border-radius: 6px 6px 6px 6px;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/*****************Matthew *****************/
+.col-centered
+{
+	text-align: center;
+}
+
+.circular
+{
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+	-webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    -o-border-radius: 150px;
+     border-radius: 150px;
+}
+
+.circular:hover
+{
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+	
+	-webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    -ms-border-radius: 150px;
+    -o-border-radius: 150px;
+     border-radius: 150px;
+}
+
+/*
+.row
+{
+	background: url("/images/Powell_Library,_UCLA_(front_view).jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+*/
+
+.name
+{
+	color: black;
+}
+
+
+

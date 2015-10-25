@@ -1,0 +1,305 @@
+doctype html(lang='en')
+head
+  meta(charset='utf-8')
+    |     
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |     
+  meta(name='description', content='')
+    |     
+  meta(name='author', content='')
+    |     
+  title Elab
+  // Bootstrap Core CSS
+  link(href='/stylesheets/squadfree/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+  // Fonts
+  link(href='/stylesheets/squadfree/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    | &#x9;
+  link(href='/stylesheets/squadfree/css/animate.css', rel='stylesheet')
+  
+  // Squad theme CSS
+  link(href='/stylesheets/squadfree/css/style.css', rel='stylesheet')
+    | &#x9;
+  link(href='/stylesheets/color/default.css', rel='stylesheet')  
+  body#page-top(data-spy='scroll', data-target='.navbar-custom')
+    // Preloader
+    #preloader
+      #load
+    |     
+    nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
+      .container
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+            i.fa.fa-bars
+          |                 
+          a.navbar-brand
+            h1 Elab
+        // Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#intro') Home
+            li
+              a(href='#service') Our Project
+            li
+              a(href='#about') Developers
+            li
+              a(href='#contact') Contact Us
+            li
+              a(href='/cospace') 
+                font(color='red')
+                  | Try Now!
+                    
+                    
+      // /.container
+    // Section: intro
+    section#intro.intro
+      .slogan
+        h2
+          | WELCOME TO 
+          span.text_color ELAB
+        | &#x9;&#x9;&#x9;
+        h4(style='margin-left: 150px; margin-right: 150px') WE ARE A UCLA POWELL LIBRARY TEAM DEDICATED TO REVOLUTIONIZING THE WAY STUDENTS CAN MANAGE FILES ON THEIR CLOUD STORAGE SYSTEMS   
+      | &#x9;&#x9;
+      .page-scroll
+        a.btn.btn-circle(href='#service')
+          i.fa.fa-angle-double-down.animated
+    // /Section: intro
+    
+    // Section: services
+    section#service.home-section.text-center.bg-gray
+      .heading-about
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .wow.bounceInDown(data-wow-delay='0.4s')
+                .section-heading
+                  h2(style='text-align: center; color: black; font-size:32px') Our Project
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  i.fa.fa-2x.fa-angle-down
+      | &#x9;&#x9;
+      h5(style='margin-left: 150px; margin-right: 150px') The goal of the Elab project is to implement an all-in-one web interface for users to effectively manage their files in multiple cloud storage devices. Our platform utilizes the Dropbox, Google Drive, and OneDrive API's. We hope that Elab facilitates research and collaboration on the Internet.
+      .container
+        .row
+          .col-lg-2.col-lg-offset-5
+            hr.marginbot-50
+        |         
+        .row
+          .col-sm-3.col-md-3
+            .wow.fadeInLeft(data-wow-delay='0.2s')
+              .service-box
+                .service-icon
+                  //img(src='img/icons/service-icon-1.png', alt='')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                .service-desc
+                  h5 One Click Transfer 
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  p
+                    | Click once and transfer all the files from one storage to another storage
+          | &#x9;&#x9;&#x9;
+          .col-sm-3.col-md-3
+            .wow.fadeInUp(data-wow-delay='0.2s')
+              .service-box
+                .service-icon
+                  //img(src='img/icons/service-icon-2.png', alt='')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                .service-desc
+                  h5 Manage Your Cloud Storages
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  p
+                    | User-friendly interface to manage all your cloud storages (Google Drive, Dropbox, Onedrive) on our single web application.
+          | &#x9;&#x9;&#x9;
+          .col-sm-3.col-md-3
+            .wow.fadeInUp(data-wow-delay='0.2s')
+              .service-box
+                .service-icon
+                  //img(src='img/icons/service-icon-3.png', alt='')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                .service-desc
+                  h5 Analytics Tool
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  p
+                    | An analytical tool to analyze your storages and optimize them.
+          | &#x9;&#x9;&#x9;
+          .col-sm-3-col.col-md-3
+            .wow.fadeInRight(data-wow-delay='0.2s')
+              .service-box
+                .service-icon
+                  //img(src='img/icons/service-icon-4.png', alt='')
+                | &#x9;&#x9;&#x9;&#x9;&#x9;
+                .service-desc
+                  h5 File Management
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  p
+                    | Create, manage, share your files (e.g., lab protocols) with others
+    // /Section: services
+        
+    // Section: about
+    section#about.home-section.text-center
+      .heading-about
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .wow.bounceInDown(data-wow-delay='0.4s')
+                .section-heading
+                  h2 Developers
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  i.fa.fa-2x.fa-angle-down
+      | &#x9;&#x9;
+      
+      .container
+        .row
+          .col-lg-2.col-lg-offset-5
+            hr.marginbot-50
+        |         
+        .row
+          .col-xs-6.col-sm-3.col-md-4
+            .wow.bounceInUp(data-wow-delay='0.2s')
+              .team.boxed-grey
+                .inner
+                  h5 Johnny Ho
+                  |                         
+                  p.subtitle Full-Stack Developer
+                  |                         
+                  .avatar
+                    a(href="https://www.linkedin.com/pub/king-chung-ho/17/292/6aa")
+                      img.img-responsive.img-circle(src='/images/Johnny Elab.jpg')
+          | &#x9;&#x9;&#x9;
+          .col-xs-6.col-sm-3.col-md-4
+            .wow.bounceInUp(data-wow-delay='0.5s')
+              .team.boxed-grey
+                .inner
+                  h5 Arko Dewri
+                  |                         
+                  p.subtitle Backend Developer
+                  |                         
+                  .avatar
+                    a(href="https://www.linkedin.com/in/arkodewri")
+                      img.img-responsive.img-circle(src='/images/Arko elab.jpg', alt='')
+          | &#x9;&#x9;&#x9;
+          .col-xs-6.col-sm-3.col-md-4
+            .wow.bounceInUp(data-wow-delay='0.8s')
+              .team.boxed-grey
+                .inner
+                  h5 Matthew Lin
+                  |                         
+                  p.subtitle Frontend Developer
+                  |                         
+                  .avatar
+                    a(href="https://www.linkedin.com/pub/matthew-lin/7b/506/a95")
+                      img.img-responsive.img-circle(src='/images/Matthew elab.jpg', alt='')
+    // /Section: about
+    
+        // Section: contact
+    section#contact.home-section.text-center
+      .heading-contact
+        .container
+          .row
+            .col-lg-8.col-lg-offset-2
+              .wow.bounceInDown(data-wow-delay='0.4s')
+                .section-heading
+                  h2 Contact Us
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  i.fa.fa-2x.fa-angle-down
+      | &#x9;&#x9;
+      .container
+        .row
+          .col-lg-2.col-lg-offset-5
+            hr.marginbot-50
+        |     
+        .row
+          .col-lg-8
+            .boxed-grey
+              form#contact-form
+                .row
+                  .col-md-6
+                    .form-group
+                      label(for='name')
+                        | Name
+                      |                             
+                      input#name.form-control(type='text', placeholder='Enter name', required='required')
+                    |                         
+                    .form-group
+                      label(for='email')
+                        | Email Address
+                      |                             
+                      .input-group
+                        span.input-group-addon
+                          span.glyphicon.glyphicon-envelope
+                        |                                 
+                        input#email.form-control(type='email', placeholder='Enter email', required='required')
+                    |                         
+                    .form-group
+                      label(for='subject')
+                        | Subject
+                      |                             
+                      select#subject.form-control(name='subject', required='required')
+                        option(value='na', selected='') Choose One:
+                        |                                 
+                        option(value='service') General Customer Service
+                        |                                 
+                        option(value='suggestions') Suggestions
+                        |                                 
+                        option(value='product') Product Support
+                  |                     
+                  .col-md-6
+                    .form-group
+                      label(for='name')
+                        | Message
+                      |                             
+                      textarea#message.form-control(name='message', rows='9', cols='25', required='required', placeholder='Message')
+                  |                     
+                  .col-md-12
+                    button#btnContactUs.btn.btn-skin.pull-right(type='submit')
+                      | Send Message
+          | &#x9;&#x9;
+          | &#x9;&#x9;
+          .col-lg-4
+            .widget-contact
+              h5 Main Office
+              | &#x9;&#x9;&#x9;&#x9;
+              | &#x9;&#x9;&#x9;&#x9;
+              address
+                strong UCLA Powell Library
+                br
+                | &#x9;&#x9;&#x9;&#x9;  405 Hilgard Avenue
+                br
+                | &#x9;&#x9;&#x9;&#x9;  Los Angeles, CA 90095
+                br
+                | &#x9;&#x9;&#x9;&#x9;  
+                abbr(title='Phone') P:
+                |  (310) 825-1938
+              | &#x9;&#x9;&#x9;&#x9;
+              address
+                strong Email
+                br
+                | &#x9;&#x9;&#x9;&#x9;  
+                a(href='mailto:#') labbook2013v3@gmail.com
+              | &#x9;
+              | &#x9;&#x9;&#x9;&#x9;
+              address
+                
+    // /Section: contact
+
+        footer
+      .container
+        .row
+          .col-md-12.col-lg-12
+            .wow.shake(data-wow-delay='0.4s')
+              .page-scroll.marginbot-30
+                a#totop.btn.btn-circle(href='#intro')
+                  i.fa.fa-angle-double-up.animated
+            | &#x9;&#x9;&#x9;&#x9;&#x9;
+            p &copy;Copyright 2015 - UCLA Simul8 Group. All rights reserved.
+    // Core JavaScript Files
+    script(src='/stylesheets/squadfree/js/jquery.min.js')
+    |     
+    script(src='/stylesheets/squadfree/js/bootstrap.min.js')
+    |     
+    script(src='/stylesheets/squadfree/js/jquery.easing.min.js')
+    | &#x9;
+    | &#x9;
+    script(src='/stylesheets/squadfree/js/jquery.scrollTo.js')
+    | &#x9;
+    script(src='/stylesheets/squadfree/js/wow.min.js')
+    // Custom Theme JavaScript
+    script(src='/stylesheets/squadfree/js/custom.js')

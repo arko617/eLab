@@ -1,0 +1,24 @@
+extend layout
+
+block content
+  input(type="button", class="btn btn-warning", id="authorizeButton", style="display: none", value="Authorize")
+  div(class="container")
+    div.mainPanel
+      div(class="row-fluid")
+        div(class="span6")
+          div.projectNavBar
+        div(class="span6")
+          div.controlPanel
+      div.notify-wrapper
+      div#projectMainPanel      
+          div#projects
+            h3 Projects
+            table(id="project",class="table table-hover")
+              thead
+                tr
+                  th
+                  th Title
+                  th Modified Date
+                  th Ownership
+              tbody
+            br

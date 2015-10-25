@@ -1,0 +1,420 @@
+doctype html(lang='en')
+head
+    // ---------------------------startbootstrap-sb-admin-2----------
+    meta(charset='utf-8')
+    |     
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |     
+    meta(name='description', content='')
+    |     
+    meta(name='author', content='')
+    |     
+    title UCLA Library web app---eLab
+    // Bootstrap Core CSS
+    link(href='/stylesheets/bower_components/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    // MetisMenu CSS
+    link(href='/stylesheets/bower_components/metisMenu/dist/metisMenu.min.css', rel='stylesheet')
+    // Timeline CSS
+    link(href='/stylesheets/bower_components/startbootstrap-sb-admin-2/dist/css/timeline.css', rel='stylesheet')
+    // Custom CSS
+    link(href='/stylesheets/bower_components/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css', rel='stylesheet')
+    // Morris Charts CSS
+    link(href='/stylesheets/bower_components/morrisjs/morris.css', rel='stylesheet')
+    // Custom Fonts
+    link(href='/stylesheets/bower_components/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      |         
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    // ------------------------End startbootstrap
+    
+    // ------------------------------testing theme nice admin
+    //link(href='/stylesheets/theme_nice_admin/css/style.css', rel='stylesheet')
+    
+    // ----------------------Elab------------
+    title= 'eLab'
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300,400italic')
+    link(rel='stylesheet', href='/stylesheets/bootstrap/customBootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    <!--Master sheets-->
+    link(rel='stylesheet', href='/stylesheets/workspace/masterSheet_workspace.css')
+    <!--Developed libraries for LabBook-->
+    script(src="/js/lib/common/common.js")
+    script(src="/js/lib/drive/driveConvertResponse.js")
+    script(src="/js/lib/drive/driveCRUD.js")
+    script(src="/js/lib/drive/driveInfo.js")
+    script(src="/js/lib/drive/driveFilters.js")
+    script(src="/js/lib/dropbox/dropboxInfo.js")
+    script(src="/js/lib/dropbox/dropboxCRUD.js")
+    
+    <!--Google Drive JS api-->
+    script(type="text/javascript", src="https://apis.google.com/js/client.js?onload=handleClientLoad")
+    
+    <!--Dropbox Drive api-->
+    script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.10.2/dropbox.min.js")
+    
+    <!--bootstrap.js is being run when requireJS is first loaded-->
+    script(type="text/javascript", data-main="/js/bootstrap", src="/js/lib/requirejs/require-min.js")
+    
+    <!--Socket.io-->
+    <!--script(src="/socket.io/socket.io.js")-->
+    
+    <!--Dynatree-->
+    link(rel="stylesheet",href="/js/lib/jquery.dynatree-1.2.5-all/src/skin-vista/ui.dynatree.css")
+   
+    <!--scrollbar-->
+    <!--link(rel='stylesheet', href='/js/lib/nanoScroller/nanoscroller.css')-->
+    
+    <!--custom-scrollar-->
+    link(rel='stylesheet', href='/js/lib/custom-scrollbar/jquery.mCustomScrollbar.css')
+    
+    <!--bootstrap-editbale-->
+    link(rel='stylesheet', href='/js/lib/bootstrap-editable/css/bootstrap-editable.css')
+   
+    <!--sidebar-->
+    link(rel='stylesheet', href='/js/lib/sidebar/css/dark-glass/sidebar.css')  
+    
+    <!--Spinner for loading icon-->
+    <!-- script(src="/js/lib/spin/spin.js")-->
+    
+    <!--w2UI css for tag system-->
+    <!-- link(rel='stylesheet', href='/js/lib/w2ui-1.3.2/w2ui-1.3.2.css') -->
+    
+    <!--tagManger for nicely looking tag-->
+    link(rel='stylesheet', href='/js/lib/tagManager/tagmanager.css')
+    
+    <!--sticky notes; add new font from google-->
+    link(href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular",rel="stylesheet",type="text/css")
+    link(rel='stylesheet', href='/js/lib/stickyNote/stickyNote.css')
+                
+    // --------------end elab  
+  body
+    #wrapper
+      // Navigation
+      nav.navbar.navbar-default.navbar-static-top.dark-bg.pageHeader(role='navigation', style='margin-bottom: 0')
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+            |                     
+            span.icon-bar
+          |                 
+          a.navbar-brand.logo(href='/')
+            | E
+            span.lite lab
+        // /.navbar-header
+        #top_menu.nav.search-row
+              // search form start
+              ul.nav.top-menu
+                li
+                  form.navbar-form(abineguid='2DB9994D3EFA4A399BC50BA852E3B700')
+                    input.form-control(placeholder='Search', type='text')
+              // search form end
+        ul.nav.navbar-top-links.navbar-right
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-envelope.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-messages
+              li
+                a(href='#')
+                  div
+                    strong John Smith
+                    |                                     
+                    span.pull-right.text-muted
+                      em Yesterday
+                  |                                 
+                  div
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    strong John Smith
+                    |                                     
+                    span.pull-right.text-muted
+                      em Yesterday
+                  |                                 
+                  div
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    strong John Smith
+                    |                                     
+                    span.pull-right.text-muted
+                      em Yesterday
+                  |                                 
+                  div
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
+              |                         
+              li.divider
+              |                         
+              li
+                a.text-center(href='#')
+                  strong Read All Messages
+                  |                                 
+                  i.fa.fa-angle-right
+            // /.dropdown-messages
+          // /.dropdown
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-tasks.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-tasks
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 1
+                      |                                         
+                      span.pull-right.text-muted 40% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
+                        span.sr-only 40% Complete (success)
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 2
+                      |                                         
+                      span.pull-right.text-muted 20% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
+                        span.sr-only 20% Complete
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 3
+                      |                                         
+                      span.pull-right.text-muted 60% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+                        span.sr-only 60% Complete (warning)
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    p
+                      strong Task 4
+                      |                                         
+                      span.pull-right.text-muted 80% Complete
+                    |                                     
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+                        span.sr-only 80% Complete (danger)
+              |                         
+              li.divider
+              |                         
+              li
+                a.text-center(href='#')
+                  strong See All Tasks
+                  |                                 
+                  i.fa.fa-angle-right
+            // /.dropdown-tasks
+          // /.dropdown
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-bell.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-alerts
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-comment.fa-fw
+                    |  New Comment
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-twitter.fa-fw
+                    |  3 New Followers
+                    |                                     
+                    span.pull-right.text-muted.small 12 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-envelope.fa-fw
+                    |  Message Sent
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-tasks.fa-fw
+                    |  New Task
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='#')
+                  div
+                    i.fa.fa-upload.fa-fw
+                    |  Server Rebooted
+                    |                                     
+                    span.pull-right.text-muted.small 4 minutes ago
+              |                         
+              li.divider
+              |                         
+              li
+                a.text-center(href='#')
+                  strong See All Alerts
+                  |                                 
+                  i.fa.fa-angle-right
+            // /.dropdown-alerts
+          // /.dropdown
+          li.dropdown
+            a.dropdown-toggle(data-toggle='dropdown', href='#')
+              i.fa.fa-user.fa-fw
+              |   
+              i.fa.fa-caret-down
+            |                     
+            ul.dropdown-menu.dropdown-user
+              li
+                a(href='#')
+                  i.fa.fa-user.fa-fw
+                  |  User Profile
+              |                         
+              li
+                a(href='#')
+                  i.fa.fa-gear.fa-fw
+                  |  Settings
+              |                         
+              li.divider
+              |                         
+              li
+                a(href='login.html')
+                  i.fa.fa-sign-out.fa-fw
+                  |  Logout
+            // /.dropdown-user
+          // /.dropdown
+        // /.navbar-top-links
+      aside
+        .navbar-default.sidebar(role='navigation')
+          .sidebar-nav.navbar-collapse
+            ul#side-menu.nav                                                  
+              li
+                a(href='/cospace')
+                  i.fa.fa-hand-o-up.fa-fw
+                  |  One-click Transfer
+              |                                              
+              li
+                a(href='#')
+                  i.fa.fa-cloud.fa-fw
+                  |  Cloud Storages
+                  span.fa.arrow
+                |                             
+                ul.nav.nav-second-level.collapse                                                                
+                  li
+                    a(href='/cloudGoogleDrive') Google Drive
+                  |                                 
+                  li
+                    a(href='/cloudDropbox') Dropbox
+                  li
+                    a(href='/#') Box
+                  li
+                    a(href='/#') Onebox                    
+                // /.nav-second-level
+              li
+                a.notActive(href='/cloudanalytics')
+                  i.fa.fa-bar-chart-o.fa-fw
+                  |  Cloud Analytics                 
+              li
+                a(href='#')
+                  i.fa.fa-info.fa-fw
+                  |  About
+                  span.fa.arrow
+                |                             
+                ul.nav.nav-second-level.collapse
+                  li
+                    a(href='/groupinfo') Our Project
+                  |                                 
+                  li
+                    a(href='/developerinfo') Developers
+                // /.nav-second-level
+              |                          
+              li(style="display:none")
+                a(href='#')
+                  i.fa.fa-files-o.fa-fw
+                  |  Sample Pages
+                  span.fa.arrow
+                |                             
+                ul.nav.nav-second-level.collapse
+                  li
+                    a(href='blank.html') Blank Page
+                  |                                 
+                  li
+                    a(href='login.html') Login Page
+                // /.nav-second-level
+          // /.sidebar-collapse
+        // /.navbar-static-side
+      |         
+      #page-wrapper
+        // /.row
+        div(class="wMainView-subContainer")
+          div(class="site-main")
+            input(type="button", class="btn btn-warning", id="authorizeButton", style="display: none", value="Authorize")
+            block content              
+    
+    // ---------------------------Javascript for the theme-----
+    // ------We are not loading any JS here because it is handled in require js, however, it is pretty slow. In engineering, let's stick with this way. But in user perspective, we may reconsider
+    //script(src='/stylesheets/bower_components/jquery/dist/jquery.min.js')
+    
+    // Bootstrap Core JavaScript
+    //script(src='/stylesheets/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    
+    // Metis Menu Plugin JavaScript
+    //script(src='/stylesheets/bower_components/metisMenu/dist/metisMenu.min.js')
+    
+    // Morris Charts JavaScript.
+    // For some reason, raphael-min.js creates error
+    //script(src='/stylesheets/bower_components/raphael/raphael-min.js')
+    |     
+    // script(src='/stylesheets/bower_components/morrisjs/morris.min.js')
+    |     
+    // script(src='/stylesheets/bower_components/startbootstrap-sb-admin-2/js/morris-data.js')
+    
+    // Custom Theme JavaScript
+    //script(src='/stylesheets/bower_components/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js')

@@ -1,0 +1,53 @@
+extend layout
+
+block content
+  input(type="button", class="btn btn-warning", id="authorizeButton", style="display: none", value="Authorize")
+  div(class="container")
+    div.mainPanel
+      div(class="row-fluid")
+        div(class="span6")
+          span.projectNavBar
+        div(class="span6")
+          span(class="owner-header") Owner: 
+          span(class="owner-header-name",id="ownerName") Stephanie Tung
+      div.notify-wrapper
+      div#projectMainPanel
+          div(id="projectFiles wordDocs spreadSheets presentations Images Others")
+            span(class="files-header") Overview
+            a Click to edit
+            div(class="overview-box")
+              div(id="overview" ,class="editTextarea")
+            h4 Protocols 
+              input(type="image",id="AddANewProtocol",src="/icons/add_16x16.png")
+            div(id="protocols")
+              form
+                table(id="projectProtocols",class="table table-hover table-condensed table-bordered")
+                  thead
+                    tr
+                      th
+                        input(type="checkbox",value="0")               
+                      th
+                      th Title
+                      th Date Modified
+                      th Owner
+                      th File Type
+                  tbody
+            div(id="files")
+              form(id="fileForm")
+                span(class="files-header") Files
+                select(name="fileAction")
+                  option(value="download") Download
+                  option(value="delete") Delete
+                input(type="button", class="btn btn-primary", id="fileActionButton", value="Submit")
+                table(id="projectFiles",class="table table-hover table-condensed table-bordered")
+                  thead
+                    tr
+                      th
+                        input(type="checkbox",value="0",id="checkAll")               
+                      th
+                      th Title
+                      th Date Modified
+                      th Owner
+                      th File Type
+                  tbody
+

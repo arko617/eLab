@@ -1,0 +1,97 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap/bootstrap.min.css')    
+    link(rel='stylesheet', href='/stylesheets/bootstrap/customBootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/dialog.css')
+    link(rel='stylesheet', href='/stylesheets/icons.css')
+    link(rel='stylesheet', href='/stylesheets/notification.css')
+    link(rel='stylesheet', href='/js/lib/DataTables/media/css/demo_table.css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300,400italic')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+        
+    <!--Developed libraries for LabBook-->
+    script(src="/js/lib/common/common.js")
+    script(src="/js/lib/drive/driveCRUD.js")
+    script(src="/js/lib/drive/driveInfo.js")
+    
+    <!--Google Drive JS api-->
+    script(type="text/javascript", src="https://apis.google.com/js/client.js?onload=handleClientLoad")
+    
+    <!--bootstrap.js is being run when requireJS is first loaded-->
+    script(type="text/javascript", data-main="/js/bootstrap", src="/js/lib/requirejs/require-min.js")
+    
+    <!--Socket.io-->
+    script(src="/socket.io/socket.io.js")
+    
+    <!--DataTables-->
+    <!--you don't need this because you already included it in the requireJs, so as to avoid the mismatch problem-->
+    <!--script(type="text/javascript", src="/js/lib/DataTables/media/js/jquery.dataTables.js")-->
+    
+  body
+    script(src="/js/lib/jquery-min.js")
+    script(src="/js/lib/twitterbootstrap/customBootstrap.js")
+    div(class="container")
+      div(class="navbar")
+        div(class="navbar-in")
+          div(class="container")
+            div(class="header-logo")  LAB BOOK
+            ul(class="nav navbar-nav")
+              li
+                div(href="#", class="header-links") WORKSPACE
+              li
+                div(href="#", class="header-links") GLOBAL RESOURCES
+              li
+                div(href="#", class="header-links") DOCUMENTATION
+            ul(class="nav navbar-nav pull-right")
+              li(class="dropdown")
+                div(class="header-margin", id="dropdownMenu1", data-toggle="dropdown")
+                  img(id="profile-pic", class="user-pic")
+                  span(class="header-user",id="userName")
+                  b(class="caret-white")
+                ul(class="dropdown-menu")
+                  li
+                    a(href="#") Profile
+                  li
+                    a(href="#") Settings
+          ul(class="nav")
+      div(class="container-fluid")
+        div(class="row-fluid")
+          div(class="span2")
+            ul(class="nav nav-pills nav-stacked")
+              li(class="nav-header") Lab Materials
+              li(id="projectDropDown")
+                a(href="/project") Projects
+                  b(class="caret floatRight")
+                div(class="offset1")
+                  ul(class="nav nav-pills nav-stacked hide",id="projectDropDownList")
+              li(class="disabled")
+                a(href="#") Message Board
+              li(class="nav-header") Events
+              li(class="disabled")
+                a(href="#") Seminars
+              li(class="disabled")
+                a(href="#") Thesis Defense             
+              li(class="disabled")
+                a(href="#") Info Session   
+              li(class="nav-header") Our community        
+              li(class="disabled")
+                a(href="#") Posts    
+              li(class="disabled")
+                a(href="#") Upload   
+              li(class="disabled")
+                a(href="#") Search                                    
+                
+                      
+          div(class="span10")
+            div(class="fill", id="content")
+              block content              
+        hr
+        footer
+          small
+            p Developed by the Simul8 Group with support from the Arcadia Fund
+            p University of California © 2013 UC Regents
+            
+
+

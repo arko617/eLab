@@ -1,0 +1,5 @@
+/*Master sheet which manage all the .css files to be included for workspace*/
+
+@import url(/stylesheets/workspace/wMainView.css);
+@import url(/stylesheets/workspace/wNavView.css);
+@import url(/stylesheets/workspace/wTagInfoView.css);

@@ -1,0 +1,113 @@
+/*************************************************wTagInfoView*************/
+#projectsOverview tr td {
+  border:none;  
+}
+
+/**Construct the nested layout of wTagInfoView**/
+/*
+#wTagInfoView{
+  border: 3px solid #e3e3e3;
+}
+*/
+
+.wTagInfoViewDetails{
+  height: 92%;
+  border: 3px solid #e3e3e3;
+  padding: 15px;
+}
+
+.wTagInfoViewDetailsDivs{
+  height: 95%;
+}
+
+#wTagInfoViewNotesDiv, #wTagInfoViewTagsDiv, #wTagInfoViewDetailsDiv{
+  display: block;
+  height: 95%;
+}
+
+#wTagInfoViewNotesDiv-content, #wTagInfoViewTagsDiv-content, #wTagInfoViewDetailsDiv-content{
+  display: block;
+  height: 95%;
+  position: relative;
+  overflow: auto;
+}
+/***************END: Construct the nested layout of wTagInfoView**/
+
+/**************Header outlook**/
+.wTagInfoViewDiv-header{
+  width: 100%;
+  border-bottom: 3px solid #e3e3e3;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.wTagInfoViewDiv-header > h3{
+  margin-bottom: 1px;
+}
+
+.wTagInfoViewTitle{
+  float:left;
+  /*border-bottom: 3px solid #e3e3e3;
+  padding-bottom: 5px;*/
+}
+
+.wTagInfoViewTitle-contentEdit{
+  float: right;
+  margin-top: 25px;  /*temporary solution to do vertical align. TODO*/
+  cursor:pointer
+}
+/***********End Header outlook**/
+
+#projectDetails{
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+#projectDetails > tbody > tr > td:first-child{
+  width: 35%;
+}
+
+#wTagInfoViewNavTags {
+  background-color: #ffffff;
+}
+
+#wTagInfoViewNavTags table{
+  border-collapse: collapse;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+/*Adjust w2ui css*/
+.w2ui-tabs .w2ui-tab.active{
+  background-color: #E8E8E8 !important;
+   cursor: pointer !important; 
+}
+
+.w2ui-tabs .w2ui-tab{
+  cursor: pointer !important; 
+}
+
+.w2ui-reset * {
+  line-height: normal !important;
+}
+
+/*projectTags*/
+#projectTags{
+  border-style:solid;
+  border-color: #ffffff;
+}
+
+/*overlap some tagManager.cc*/
+.tm-tag{
+  font-size: 14px !important;
+  /*padding: 3px !important;*/
+  color: #fff; /*bootstrap*/
+  background-color: #428bca; /*bootstrap*/
+  border-color: #357ebd; /*bootstrap*/
+}
+
+.projectDetails-subtitle{
+  font-weight:bold;
+}
+

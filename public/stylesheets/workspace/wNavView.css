@@ -1,0 +1,15 @@
+/*******************************wNavView**********************************/
+
+.searchProject{
+  margin: 10px 20px 10px 20px;
+}
+
+#wNavViewSideBar{
+  height:100%;
+}
+
+#wNavViewSideBar > .fill{
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+  height: 100%
+}

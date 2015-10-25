@@ -1,0 +1,61 @@
+/*
+* Matthew API Test View
+*/
+
+define([
+        //These are the path aliases that we configured in our bootstrap
+        'jquery',
+        'underscore',
+        'backbone',
+        'model/matthewApiTestModel',
+        'collection/matthewApiTestCollection',
+        'text!view_template/matthewApiTest/matthewApiTestTemplate.html',
+        'bootstrapLib',
+        
+        ], function($, _, Backbone, matthewApiTestModel, 
+        		matthewApiTestCollection, MatthewApiTestTemplate){
+				
+        		var files[];
+        		var matthewApiTestView = Backbone.View.extend({
+        			el: ".site-main",
+        			matthewApiTestTemplate: _.template(MatthewApiTestTemplate),
+        			
+        			initialize: function(){
+        				this.render();
+        			},
+        			
+        			//Render the overall workspace view
+        			render: function(){
+        				alert("Created view!");
+        			},
+        		
+        			getFiles: function(callback) {
+        				var retrievePageOfFiles = function(request, result) 
+        				{
+        					
+        				    request.execute(function(resp) 
+        				    {	    	
+        				    	result = result.concat(resp.items);
+        				    	var nextPageToken = resp.nextPageToken;
+        				      
+        				      	if (nextPageToken) 
+        				      	{
+        				        request = gapi.client.drive.files.list({
+        				          'pageToken': nextPageToken
+        				        });
+        				        	retrievePageOfFiles(request, result);
+        				      	}
+        				      
+        				      	else 
+        				      	{
+        				    	  callback(result);
+        				      	}
+        				    });
+        				}
+        				  var initialRequest = gapi.client.drive.files.list();
+        				  retrievePageOfFiles(initialRequest, []);
+        			},
+        		});
+        		
+      return matthewApiTestView;
+});

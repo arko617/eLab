@@ -1,0 +1,139 @@
+/*sb-admin-2.css*/
+
+.sidebar {
+z-index: 1;
+position: fixed;
+width: 190px;
+margin-top: 53px;
+background: #394a59;
+}
+
+#page-wrapper {
+position: inherit;
+margin: 0 0 0 190px;
+/*padding: 0 30px;*/
+border-left: 1px solid #e7e7e7;
+}
+
+also remove #page-wrapper in line 15 of the sb-admin-2.css
+
+also remove row after page-wrapper
+/----------------------------------change backgroud color in the menu
+.navbar-default {
+background-color: #f8f8f8;
+border-color: #e7e7e7;
+}
+
+to.....
+
+.dark-bg {
+color: #fff;
+background: #1a2732;
+background-color: #1a2732;
+border-bottom: 1px solid #f1f2f7;
+}
+
+.pageHeader{
+	position: fixed;
+left: 0;
+right: 0;
+z-index: 1002;
+}
+
+-------------------
+.sidebar ul li a.active {
+background-color: #2e3b46;
+}
+
+.sidebar ul > li > span.fa {
+float: right;
+margin-right: 8px;
+margin-top: 6px;
+}
+
+------------------
+!!!!!!!!!!!!!!! create a new class for the logo
+.navbar-default .navbar-brand {
+color: #777;
+}
+
+a.logo {
+font-size: 22px;
+font-weight: 300;
+color: #fed189;
+float: left;
+/*margin-top: 15px;*/
+text-transform: uppercase;
+}
+
+//
+add this to the <a> of the logo
+<span class="lite"">lab</span>
+//
+.lite {
+color: #00a0df !important;
+}
+
+
+
+-----------------
+
+------------------------------------boostraph.min.css
+.nav>li>a:focus, .nav>li>a:hover {
+text-decoration: none;
+background-color: #2e3b46;
+}
+
+.nav(create a new class for this)>li>a {
+position: relative;
+display: block;
+padding: 10px 15px;
+color: #d0d8df;
+text-decoration: none;
+display: block;
+padding: 15px 0 15px 10px;
+font-size: 16px;
+font-weight: 300;
+outline: none;
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+transition: all 0.3s ease;
+border-right: 1px solid #D7D7D7;
+/* border-bottom: 1px solid #D7D7D7; */
+}
+
+---------------
+remove .row from .site-main
+
+replace .wMainView-subContainer from wMainView.css to
+.wMainView-subContainer{
+display: inline-block;
+margin-top: 50px;
+padding: 15px;
+width: 100%;
+}
+
+
+------bootstrap.min.css
+.page-header {
+padding-bottom: 9px;
+/* margin: 40px 0 20px; */
+border-bottom: 1px solid #eee;
+opacity: 0.7;
+text-transform: uppercase;
+}
+
+---------sb-admin-2
+body{
+	color: #797979;
+background: #eeeeee;
+font-family: 'Lato', sans-serif;
+padding: 0px !important;
+margin: 0px !important;
+font-size: 14px !important;
+}
+
+---- in the page add the content
+<ol class="breadcrumb"><li><i class="fa fa-home"></i><a href="/stylesheets/theme_nice_admin/index.html">Home</a></li>           <li><i class="fa fa-laptop"></i>Dashboard</li></ol>
